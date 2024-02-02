@@ -1,11 +1,4 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.excuseGenerator = function() {
+const excuseGenerator = function() {
   let quien = ["CartMan", "kyle", "kenny", "butters"];
   let cuando = ["ayer", "en mañana", "en la tarde", "antier"];
   let accion = ["cayo", "volo", "mojo", "le cayo un rayo"];
@@ -27,4 +20,10 @@ window.excuseGenerator = function() {
     ":D";
 
   return returnExcuse;
+};
+
+document.getElementById("excuse").innerHTML = excuseGenerator();
+
+document.getElementById("button_gen").onclick = () => {
+  document.getElementById("excuse").innerHTML = excuseGenerator();
 };
